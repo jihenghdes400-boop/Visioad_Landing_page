@@ -6,20 +6,14 @@ export default function Contact() {
       id="contact"
       className="relative py-24 text-white overflow-hidden"
     >
-      {/* Background image */}
       <Image
         src="/contactimg.jpg"
         alt="contact background"
         fill
         priority
         className="object-cover"
-
-      />
-
-      {/* Dark overlay */}
+        />
       <div className="absolute inset-0 bg-black/60"></div>
-
-      {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6">
         <div>
           <h2 className="text-center text-4xl uppercase tracking-widest mb-3 font-serif font-bold">
@@ -31,7 +25,6 @@ export default function Contact() {
             digital directement dans votre boîte de réception.
           </p>
         </div>
-
         <form className="space-y-6">
           <div className="flex flex-col md:flex-row md:space-x-4">
             <div className="flex-1">
@@ -86,7 +79,7 @@ export default function Contact() {
           <div className="flex justify-center">
             <button
               type="submit"
-              className="bg-black/70 px-6 py-3 uppercase tracking-wide text-sm border border-white hover:bg-white hover:text-black transition"
+              className="bg-black/70 px-6 py-3 uppercase tracking-wide text-sm border border-white hover:bg-white hover:text-black transition rounded-lg"
             >
               Demandez votre devis
             </button>

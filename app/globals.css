@@ -33,12 +33,3 @@ body {
     transform: translateY(-50%);
   }
 }
-
-.animate-vertical-scroll {
-  animation: vertical-scroll 30s linear infinite;
-  animation: vertical-scroll 30s linear infinite reverse;
-
-}
-.animate-vertical-scroll:hover {
-  animation-play-state: paused;
-}

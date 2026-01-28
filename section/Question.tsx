@@ -45,8 +45,6 @@ export default function Faq() {
   return (
     <section id="Question" className="bg-black dark:bg-black py-24 transition-colors">
       <div className="max-w-5xl mx-auto px-6">
-        
-        {/* Title */}
         <h2 className="text-4xl font-extrabold mb-16 text-center">
           <span className="block text-white dark:text-white">
             QUESTIONS FRÉQUEMMENT

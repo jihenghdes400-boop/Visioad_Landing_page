@@ -34,7 +34,7 @@ export default function Header() {
           </li>
         </ul>
         <div className="hidden md:block">
-          <Link href="#contact" className="hover:text-white transition mt-4 bg-white text-black px-4 py-2 rounded-lg">
+          <Link href="#contact" className="hover:bg-black/70 hover:text-white border border-white  mt-4 bg-white text-black px-4 py-2 rounded-lg">
             Contact-nous
           </Link>
         </div>
@@ -44,7 +44,7 @@ export default function Header() {
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
+              strokeWidth={2} 
               d="M6 18L18 6M6 6l12 12"
             />
           )
@@ -81,7 +81,7 @@ export default function Header() {
                 Question
               </Link>
             </li>
-            <Link href="#contact" className="hover:text-white transition mt-4 bg-white text-black px-4 py-2 rounded-lg">
+            <Link href="#contact" className="hover:bg-black/70 hover:text-white  border border-white transition mt-4 bg-white text-black px-4 py-2 rounded-lg">
               Contact-nous
             </Link>
           </ul>
