@@ -9,7 +9,7 @@ export default function Footer() {
           <Image src="/logo1.png" alt="Visioad Logo" width={150} height={100} />
           <p className="text-sm text-gray-400">
             Nous aidons les entreprises à grandir grâce
-            au marketing digital et aux solutions web modernes.
+            au marketing  <br />digital et aux solutions web modernes.
           </p>
         </div>
         <div className="">
@@ -45,9 +45,11 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-semibold mb-4">Contact</h4>
           <ul className="space-y-2 text-sm">
-            <li>📍 Tunisie</li>
+            <li>🌍 Ibrahim Center Building,<br />
+              Habib Bourguiba Avenue,<br />
+              Sousse 4000</li>
             <li>📞 +216 31 439 350</li>
-            <li>✉️ contact@visioad.com</li>
+            <li>💬 Info@visioad.com </li>
           </ul>
         </div>
       </div>

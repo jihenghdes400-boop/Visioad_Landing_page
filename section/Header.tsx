@@ -28,20 +28,15 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="#contact" className="hover:text-white transition">
-              Contact
-            </Link>
-          </li>
-          <li>
             <Link href="#Question" className="hover:text-white transition">
               Question
             </Link>
           </li>
         </ul>
         <div className="hidden md:block">
-          <button className="bg-white text-black px-4 py-2 rounded-lg font-medium hover:bg-gray-200 transition">
-            commencer
-          </button>
+          <Link href="#contact" className="hover:text-white transition mt-4 bg-white text-black px-4 py-2 rounded-lg">
+            Contact-nous
+          </Link>
         </div>
         <button onClick={() => setOpen(!open)}
           className="md:hidden text-white" >
@@ -82,18 +77,13 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="#contact" className="hover:text-white transition">
-                Contact
-              </Link>
-            </li>
-            <li>
               <Link href="#Question" className="hover:text-white transition">
                 Question
               </Link>
             </li>
-            <button className="mt-4 bg-white text-black px-4 py-2 rounded-lg">
-              commencer
-            </button>
+            <Link href="#contact" className="hover:text-white transition mt-4 bg-white text-black px-4 py-2 rounded-lg">
+              Contact-nous
+            </Link>
           </ul>
         </div>
       )}

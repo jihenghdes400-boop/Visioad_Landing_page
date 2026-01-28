@@ -49,24 +49,23 @@ export default function Testimonials() {
   return (
     <section id="avis-client" className="py-32 bg-black text-white">
       <div className="max-w-7xl mx-auto px-6">
-
-        {/* Title */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold">
             Ce que disent nos <span className="text-[#E30613]">Clients</span>
           </h2>
         </div>
 
-        {/* ✅ WRAPPER */}
+        {/* Wrapper */}
         <div className="relative h-[900px] overflow-hidden">
 
-          {/* ✅ GRID يتحرّك */}
+          {/* Grid */}
           <div className="grid md:grid-cols-2 gap-10 animate-vertical-scroll">
 
             {[...testimonials, ...testimonials].map((item, index) => (
               <div
                 key={index}
-                className={`relative rounded-2xl p-[1px] bg-gradient-to-br from-purple-500 to-pink-500
+                className={`
+                  relative rounded-2xl
                   ${index % 3 === 0 ? "rotate-1" : ""}
                   ${index % 3 === 1 ? "-rotate-2 md:mt-10" : ""}
                   ${index % 3 === 2 ? "rotate-2" : ""}
@@ -91,14 +90,13 @@ export default function Testimonials() {
                       <p className="text-sm text-gray-400">{item.role}</p>
                     </div>
                   </div>
-
                 </div>
               </div>
             ))}
 
           </div>
 
-          {/* fade فوق و لتحت (اختياري) */}
+          {/* Fade effect */}
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
         </div>
       </div>
