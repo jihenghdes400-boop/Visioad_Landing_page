@@ -26,10 +26,16 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mt-4">
-          <button className="bg-black/70 text-white px-6 py-3 uppercase tracking-wide text-sm border border-white hover:bg-white hover:text-black transition">
+          <button className="">
             
-            Voir une vidéo rapide
+           
           </button>
+          <Link
+             href="/visioad-video.mp4"
+            className="bg-black/70 text-white px-6 py-3 uppercase tracking-wide text-sm border border-white hover:bg-white hover:text-black transition"
+            >
+              Voir une vidéo rapide
+          </Link>
         </div>
       </div>
     </section>

@@ -7,9 +7,9 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="fixed top-0 z-50 w-full bg-black/100 backdrop-blur-sm">
-      <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 ">
         <div className="text-white text-xl font-bold">
-          <Image src="/logo1.png" alt="logo" width={100} height={50} />
+          <Image src="/logo1.png" alt="logo" width={150} height={80} />
         </div>
         <ul className="hidden md:flex items-center gap-8 text-gray-300">
           <li>
@@ -24,7 +24,7 @@ export default function Header() {
           </li>
           <li>
             <Link href="#avis-client" className="hover:text-white transition">
-              avis-client
+              Avis
             </Link>
           </li>
           <li>
@@ -78,7 +78,7 @@ export default function Header() {
             </li>
             <li>
               <Link href="#avis-client" className="hover:text-white transition">
-                avis-client
+                Avis
               </Link>
             </li>
             <li>
