@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ScrollReveal from "@/section/ScrollReveal";
 export default function Hero() {
   return (
     <section className="relative min-h-screen w-full ">

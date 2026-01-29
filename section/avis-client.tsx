@@ -5,7 +5,7 @@ import avatar3 from "@/public/sophia.svg";
 import avatar4 from "@/public/sophie.png";
 import avatar5 from "@/public/liam.svg";
 import avatar6 from "@/public/ethan.svg";
-
+import ScrollReveal from "@/section/ScrollReveal";
 const testimonials = [
   {
     name: "Lucas Martin",
@@ -82,50 +82,56 @@ export default function Testimonials() {
   return (
     <section id="avis-client" className="py-32 bg-black text-white">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Ce que disent nos <span className="text-[#E30613]">Clients</span>
-          </h2>
-        </div>
+        <ScrollReveal>
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-bold">
+              Ce que disent nos <span className="text-[#E30613]">Clients</span>
+            </h2>
+          </div>
+        </ScrollReveal>
 
         <div className="grid md:grid-cols-3 gap-10 items-stretch">
 
           {testimonials.map((item, index) => (
-            <div key={index} className="h-full">
-              <div className="
-                h-full min-h-[240px]
-                rounded-2xl bg-neutral-900 p-6
-                flex flex-col justify-between
-                transition-transform duration-300
-                hover:scale-[1.02]
-              ">
-
-
-                <Stars count={item.rating ?? 5} />
-
-                <p className="text-gray-200 mb-6">
-                  “{item.text}”
-                </p>
-
-                <div className="flex items-center gap-4 mt-auto">
-                  <div className="w-12 h-12 rounded-full overflow-hidden">
-                    <Image
-                      src={item.avatar}
-                      alt={item.name}
-                      width={48}
-                      height={48}
-                    />
+            <ScrollReveal>
+              <div key={index} className="h-full">
+                <ScrollReveal>
+                  <div className="
+                    h-full min-h-[240px]
+                    rounded-2xl bg-neutral-900 p-6
+                    flex flex-col justify-between
+                    transition-transform duration-300
+                    hover:scale-[1.02]
+                  ">
+                    <Stars count={item.rating ?? 5} />
+                    <ScrollReveal>
+                      <p className="text-gray-200 mb-6">
+                        “{item.text}”
+                      </p>
+                    </ScrollReveal>
+                    <div className="flex items-center gap-4 mt-auto">
+                      <ScrollReveal>
+                        <div className="w-12 h-12 rounded-full overflow-hidden">
+                          <Image
+                            src={item.avatar}
+                            alt={item.name}
+                            width={48}
+                            height={48}
+                          />
+                        </div>
+                      </ScrollReveal>
+                      <ScrollReveal>
+                        <div>
+                          <p className="font-semibold">{item.name}</p>
+                          <p className="text-sm text-gray-400">{item.role}</p>
+                        </div>
+                      </ScrollReveal>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-semibold">{item.name}</p>
-                    <p className="text-sm text-gray-400">{item.role}</p>
-                  </div>
-                </div>
-
+                </ScrollReveal>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
-
         </div>
       </div>
     </section>

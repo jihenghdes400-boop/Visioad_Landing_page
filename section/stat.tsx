@@ -1,5 +1,5 @@
 "use client";
-
+import ScrollReveal from "@/section/ScrollReveal";
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
@@ -62,23 +62,29 @@ function Counter({ value }: { value: string }) {
 
 export default function StatsSection() {
   return (
-    <section id="stat" className="bg-black py-20">
-      <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-16">
-          Prouvé par les <span className="text-red-500">stats</span>
-        </h2>
+      <section id="stat" className="bg-black py-20">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <ScrollReveal>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-16">
+              Prouvé par les <span className="text-red-500">stats</span>
+            </h2>
+          </ScrollReveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12">
-          {stats.map((stat, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <Counter value={stat.value} />
-              <p className="text-sm text-gray-400 mt-2 text-center">
-                {stat.label}
-              </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12">
+              {stats.map((stat, index) => (
+                <ScrollReveal>
+                  <div key={index} className="flex flex-col items-center">
+                    <Counter value={stat.value} />
+                    <p className="text-sm text-gray-400 mt-2 text-center">
+                      {stat.label}
+                    </p>
+                  </div>
+                </ScrollReveal>
+              ))}
             </div>
-          ))}
+
         </div>
-      </div>
-    </section>
+      </section>
+
   );
 }

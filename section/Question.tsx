@@ -1,5 +1,5 @@
 "use client";
-
+import ScrollReveal from "@/section/ScrollReveal";
 import { useState } from "react";
 
 const faqs = [
@@ -45,48 +45,52 @@ export default function Faq() {
   return (
     <section id="Question" className="bg-black dark:bg-black py-24 transition-colors">
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="text-4xl font-extrabold mb-16 text-center">
-          <span className="block text-white dark:text-white">
-            QUESTIONS FRÉQUEMMENT
-          </span>
-          <span className="block text-red-600">POSÉES</span>
-        </h2>
+        <ScrollReveal>
+          <h2 className="text-4xl font-extrabold mb-16 text-center">
+            <span className="block text-white dark:text-white">
+              QUESTIONS FRÉQUEMMENT
+            </span>
+            <span className="block text-red-600">POSÉES</span>
+          </h2>
+        </ScrollReveal>
 
-        {/* FAQ items */}
         <div className="divide-y divide-gray-200 dark:divide-gray-800">
           {faqs.map((item, index) => (
             <div key={index} className="py-6">
-              <button
-                onClick={() =>
-                  setOpenIndex(openIndex === index ? null : index)
-                }
-                className="w-full flex justify-between items-center text-left"
-              >
-                <h3 className="text-lg font-semibold text-white dark:text-white">
-                  {item.question}
-                </h3>
-
-                <span
-                  className={`transform transition-transform duration-300 text-gray-500
-                    ${openIndex === index ? "rotate-180" : ""}`}
+              <ScrollReveal>
+                <button
+                  onClick={() =>
+                    setOpenIndex(openIndex === index ? null : index)
+                  }
+                  className="w-full flex justify-between items-center text-left"
                 >
-                  ▾
-                </span>
-              </button>
+                  <h3 className="text-lg font-semibold text-white dark:text-white">
+                    {item.question}
+                  </h3>
 
+                  <span
+                    className={`transform transition-transform duration-300 text-gray-500
+                      ${openIndex === index ? "rotate-180" : ""}`}
+                  >
+                    ▾
+                  </span>
+                </button>
+              </ScrollReveal>
               {/* Answer */}
-              <div
-                className={`grid transition-all duration-300 ease-in-out
-                  ${
-                    openIndex === index
-                      ? "grid-rows-[1fr] opacity-100 mt-4"
-                      : "grid-rows-[0fr] opacity-0"
-                  }`}
-              >
-                <p className="overflow-hidden text-gray-400 dark:text-gray-500 max-w-3xl">
-                  {item.answer}
-                </p>
-              </div>
+              <ScrollReveal>
+                <div
+                  className={`grid transition-all duration-300 ease-in-out
+                    ${
+                      openIndex === index
+                        ? "grid-rows-[1fr] opacity-100 mt-4"
+                        : "grid-rows-[0fr] opacity-0"
+                    }`}
+                >
+                  <p className="overflow-hidden text-gray-400 dark:text-gray-500 max-w-3xl">
+                    {item.answer}
+                  </p>
+                </div>
+              </ScrollReveal>
             </div>
           ))}
         </div>
